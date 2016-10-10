@@ -1,8 +1,10 @@
 # Java 8 指南 (自用)
 
-> [“Java is still not dead—and people are starting to figure that out.”]
+
+> “Java is still not dead—and people are starting to figure that out.”
 
 这是对(https://github.com/winterbe/java8-tutorial) 的中文翻译
+如果对你有帮助，请到(https://github.com/winterbe/java8-tutorial)  赏原作者一个Start★
 
 **No walls of text, just a bunch of commented code snippets. Enjoy!**
 
