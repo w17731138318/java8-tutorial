@@ -13,11 +13,11 @@
 * [接口的默认方法](#接口的默认方法)
 * [Lambda 表达式](#Lambda 表达式)
 * [函数式接口](#函数式接口)
-* [Method and Constructor References](#method-and-constructor-references)
-* [Lambda Scopes](#lambda-scopes)
-  * [Accessing local variables](#accessing-local-variables)
-  * [Accessing fields and static variables](#accessing-fields-and-static-variables)
-  * [Accessing Default Interface Methods](#accessing-default-interface-methods)
+* [方法和构造函数引用](#方法和构造函数引用)
+* [Lambda 作用域](#Lambda 作用域)
+  * [访问局部变量](#访问局部变量)
+  * [访问对象字段与静态变量](#访问对象字段与静态变量)
+  * [访问方法的默认接口](#访问方法的默认接口)
 * [Built-in Functional Interfaces](#built-in-functional-interfaces)
   * [Predicates](#predicates)
   * [Functions](#functions)
@@ -142,7 +142,7 @@ System.out.println(converted);    // 123
 Keep in mind that the code is also valid if the `@FunctionalInterface` annotation would be omitted.
 
 
-## Method and Constructor References
+## 方法和构造函数引用
 
 The above example code can be further simplified by utilizing static method references:
 
@@ -202,11 +202,11 @@ Person person = personFactory.create("Peter", "Parker");
 
 We create a reference to the Person constructor via `Person::new`. The Java compiler automatically chooses the right constructor by matching the signature of `PersonFactory.create`.
 
-## Lambda Scopes
+## Lambda 作用域
 
 Accessing outer scope variables from lambda expressions is very similar to anonymous objects. You can access final variables from the local outer scope as well as instance fields and static variables.
 
-### Accessing local variables
+### 访问局部变量
 
 We can read final local variables from the outer scope of lambda expressions:
 
@@ -239,7 +239,7 @@ num = 3;
 
 Writing to `num` from within the lambda expression is also prohibited.
 
-### Accessing fields and static variables
+### 访问对象字段与静态变量
 
 In contrast to local variables, we have both read and write access to instance fields and static variables from within lambda expressions. This behaviour is well known from anonymous objects.
 
@@ -262,7 +262,7 @@ class Lambda4 {
 }
 ```
 
-### Accessing Default Interface Methods
+### 访问方法的默认接口
 
 Remember the formula example from the first section? Interface `Formula` defines a default method `sqrt` which can be accessed from each formula instance including anonymous objects. This does not work with lambda expressions.
 
