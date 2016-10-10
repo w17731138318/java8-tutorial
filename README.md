@@ -18,7 +18,7 @@
   * [访问局部变量](#访问局部变量)
   * [访问对象字段与静态变量](#访问对象字段与静态变量)
   * [访问方法的默认接口](#访问方法的默认接口)
-* [Built-in Functional Interfaces](#built-in-functional-interfaces)
+* [内置功能接口](#内置功能接口)
   * [Predicates](#predicates)
   * [Functions](#functions)
   * [Suppliers](#suppliers)
@@ -273,7 +273,7 @@ Formula formula = (a) -> sqrt(a * 100);
 ```
 
 
-## Built-in Functional Interfaces
+## 内置功能接口
 
 The JDK 1.8 API contains many built-in functional interfaces. Some of them are well known from older versions of Java like `Comparator` or `Runnable`. Those existing interfaces are extended to enable Lambda support via the `@FunctionalInterface` annotation.
 
