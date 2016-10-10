@@ -3,7 +3,9 @@
 > [“Java is still not dead—and people are starting to figure that out.”]
 
 这是对(https://github.com/winterbe/java8-tutorial)的中文翻译
+
 **No walls of text, just a bunch of commented code snippets. Enjoy!**
+
 **没有文字，只有一堆注释的代码片段。请享受！**
 
 ## 内容
