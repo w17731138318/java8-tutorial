@@ -341,9 +341,17 @@ comparator.reversed().compare(p1, p2);  // < 0
 
 ## Optionals
 
-Optionals are not functional interfaces, but nifty utilities to prevent `NullPointerException`. It's an important concept for the next section, so let's have a quick look at how Optionals work.
+Optionalsk来历
 
-Optional is a simple container for a value which may be null or non-null. Think of a method which may return a non-null result but sometimes return nothing. Instead of returning `null` you return an `Optional` in Java 8.
+到目前为止, 臭名昭著的空指针异常是导致Java应用程序失败的最常见原因。以前, 为了解决空指针异常，Google公司著名的Guava项目引入了Optional类, Guava通过使用检查空值的方式来防止代码污染, 它鼓励程序员写更干净的代码。受到Google Guava的启发, Optional类已经成为Java 8类库的一部分。
+
+Optional实际上是个容器：它可以保存类型T的值, 或者仅仅保存null。Optional提供很多有用的方法, 这样我们就不用显式进行空值检测。更多详情请参考官方文档。
+
+原文翻译
+
+Optionals 不是功能接口, 但能极好而有效的防止NullPointerException。这是下一节的一个重要概念，所以让我们看看如何使用。
+
+Optional 被定义为一个简单的容器, 其值可能是null或者不是null。在Java 8之前一般某个函数应该返回非空对象但是偶尔却可能返回了null, 而在Java 8中, 不推荐你返回null而是返回Optional。
 
 ```java
 Optional<String> optional = Optional.of("bam");
