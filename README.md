@@ -11,8 +11,8 @@
 ## 内容
 
 * [接口的默认方法](#接口的默认方法)
-* [Lambda expressions](#lambda-expressions)
-* [Functional Interfaces](#functional-interfaces)
+* [Lambda 表达式](#Lambda 表达式)
+* [函数式接口](#函数式接口)
 * [Method and Constructor References](#method-and-constructor-references)
 * [Lambda Scopes](#lambda-scopes)
   * [Accessing local variables](#accessing-local-variables)
@@ -78,7 +78,7 @@ formula.sqrt(16);           // 4.0
 The formula is implemented as an anonymous object. The code is quite verbose: 6 lines of code for such a simple calculation of `sqrt(a * 100)`. As we'll see in the next section, there's a much nicer way of implementing single method objects in Java 8.
 
 
-## Lambda expressions
+## Lambda 表达式
 
 Let's start with a simple example of how to sort a list of strings in prior versions of Java:
 
@@ -118,7 +118,7 @@ names.sort((a, b) -> b.compareTo(a));
 List now has a `sort` method. Also the java compiler is aware of the parameter types so you can skip them as well. Let's dive deeper into how lambda expressions can be used in the wild.
 
 
-## Functional Interfaces
+## 函数式接口
 
 How does lambda expressions fit into Java's type system? Each lambda corresponds to a given type, specified by an interface. A so called _functional interface_ must contain **exactly one abstract method** declaration. Each lambda expression of that type will be matched to this abstract method. Since default methods are not abstract you're free to add default methods to your functional interface.
 
